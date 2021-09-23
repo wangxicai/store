@@ -1,3 +1,4 @@
+'''
 class student:
     __num = ''
     __name = ''
@@ -165,5 +166,97 @@ v.setcolor('红色')
 v.setweight('1000斤')
 v.settank('500')
 v.run('爬山')
+'''
+class studet:
+    def __init__(self,num,name,age,sex,height,weight,grade,adress,phone):
+        self.__num = num
+        self.__name = name
+        self.__age = age
+        self.__sex = sex
+        self.__height = height
+        self.__weight = weight
+        self.__grade = grade
+        self.__adress = adress
+        self.__phone = phone
+
+    def study(self,time):
+        print(f'学生{self.__name}学习了{time}小时')
+
+    def play(self,game):
+        print(f'学生{self.__name}正在打{game}')
+
+    def program(self,rows):
+        print(f'学生{self.__name}已经写了{rows}代码')
+
+    def count(self,*a,**b):
+        return a + b
+
+s = studet('1001','王小明','18','男','180cm','120斤','优秀','北京','1008820')
+s.study(5)
+s.play('王者荣耀')
+s.program(5000)
+
+
+
+class vehicle:
+    def __init__(self,name,brand,color,weight,tank):
+        self.__name = name
+        self.__brand = brand
+        self.__color = color
+        self.__weight = weight
+        self.__tank = tank
+
+    def run(self,*action):
+        for i in action:
+            print(f'{self.__name}正在{i}')
+
+v = vehicle('法拉利','4','金色','1000斤','500升')
+v.run('越野','赛车')
+v1 = vehicle('宝马','2','白色','1吨','500升')
+v2 = vehicle('铃木','3','红色','1吨','500升')
+v3 = vehicle('五菱','4','红色','1吨','500升')
+v4 = vehicle('拖拉机','6','红色','1吨','500升')
+v4.run('爬坡')
+
+
+
+class computer:
+    def __init__(self,model,standtime,color,weight,cpu,memory,hardpan):
+        self.__model = model
+        self.__standtime = standtime
+        self.__color = color
+        self.__weight = weight
+        self.__cpu = cpu
+        self.__memory = memory
+        self.__hardpan = hardpan
+
+    def playgame(self,game):
+        print(f'我正在用{self.__model}牌子的电脑打{game}')
+
+    def office(self):
+        print(f'我在用{self.__color}的电脑办公')
+c = computer('联想','2小时','蓝色','i7','1000g','8G','256G')
+c.playgame('英雄联盟')
+c.office()
+
+
+
+class monkey:
+    def __init__(self, sort, sex, color, weight):
+        self.__sort = sort
+        self.__sex = sex
+        self.__color = color
+        self.__weight = weight
+
+    def fire(self, material):
+        print(f'{self.__sort}正在用{material}造火')
+
+    def learn(self, *thing):
+        for i in thing:
+            print(f'{self.__sort}正在学习{i}')
+
+m = monkey('长臂猿', 'man', '黄色', '50kg')
+m.fire('石头')
+m.learn('烤鱼', '打球')
 
 
